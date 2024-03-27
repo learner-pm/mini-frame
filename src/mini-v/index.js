@@ -24,15 +24,14 @@ class MiniV {
         }
         return [currentV, updated]
     }
-    creatRoot = (root) => {
+    createRoot = (root) => {
         this.#root = root
         return this
     }
     render = (app) => {
         this.#app = app || this.#app
         this.#root.innerHTML = ''
-        this.#root.innerHTML = this.#app()
-        // this.#root.appendChild(this.#app())
+        this.#root.appendChild(this.#app())
     }
 }
 const _MiniV = new MiniV()
